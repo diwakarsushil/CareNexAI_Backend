@@ -27,6 +27,18 @@ const doctorSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    schedule: [
+      {
+        day: {
+          type: String,
+        },
+        timings: [
+          {
+            type: String,
+          },
+        ],
+      },
+    ],
   },
   {
     timestamps: true,
