@@ -8,6 +8,9 @@ const { errorHandler } = require('./middlewares/errorMiddleware');
 // Route files
 const hospitalRoutes = require('./routes/hospitalRoutes');
 const doctorRoutes = require('./routes/doctorRoutes');
+const patientRoutes = require('./routes/patientRoutes');
+const appointmentRoutes = require('./routes/appointmentRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 // Connect to database
 // Note: Uncomment this once MONGO_URI is set in .env
@@ -27,6 +30,9 @@ app.use(helmet());
 // Mount routers
 app.use('/api/hospitals', hospitalRoutes);
 app.use('/api/doctors', doctorRoutes);
+app.use('/api/patients', patientRoutes);
+app.use('/api/appointments', appointmentRoutes);
+app.use('/api/auth', authRoutes);
 
 app.get('/', (req, res) => {
   res.send('CareNexAI API is running...');

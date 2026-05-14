@@ -169,7 +169,35 @@ const doctors = [
   },
 ];
 
+const patients = [
+  {
+    Patient_ID: 'P001',
+    FullName: 'Rahul Sharma',
+    MobileNumber: '9876543210',
+    DateOfBirth: new Date('1985-06-15'),
+    City: 'Pune',
+    PreferredLanguage: 'Hindi',
+  },
+  {
+    Patient_ID: 'P002',
+    FullName: 'Priya Desai',
+    MobileNumber: '8765432109',
+    DateOfBirth: new Date('1992-11-20'),
+    City: 'Mumbai',
+    PreferredLanguage: 'English',
+  },
+];
+
+const admins = [
+  {
+    username: 'admin',
+    password: 'password123',
+  },
+];
+
 module.exports = {
   hospitals,
   doctors,
+  patients,
+  admins,
 };
