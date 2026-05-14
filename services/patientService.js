@@ -12,14 +12,14 @@ const getPatients = async () => {
 };
 
 const getPatientById = async (id) => {
-  const patient = await Patient.findById(id);
+  const patient = await Patient.findOne({ Patient_ID: id });
   if (!patient) return null;
 
-  // Fetch appointments for this patient
-  const appointments = await Appointment.find({ Patient: id }).populate('Doctor', 'Doctor_Name Specialty').sort({ AppointmentDate: 1 });
-  
+  // Fetch appointments for this patient using their MongoDB _id
+  const appointments = await Appointment.find({ Patient: patient._id }).populate('Doctor', 'Doctor_ID Doctor_Name Specialty').sort({ AppointmentDate: 1 });
+
   const now = new Date();
-  
+
   const upcomingAppointments = appointments.filter(app => app.AppointmentDate >= now && app.Status !== 'Cancelled');
   const pastAppointments = appointments.filter(app => app.AppointmentDate < now || app.Status === 'Cancelled');
 
@@ -36,11 +36,12 @@ const getPatientByMobile = async (mobile) => {
   if (!patient) return null;
 
   // Use the same logic as getPatientById to fetch and format appointments
-  return await getPatientById(patient._id);
+  // Note: Since getPatientById now expects Patient_ID, we pass patient.Patient_ID
+  return await getPatientById(patient.Patient_ID);
 };
 
 const updatePatient = async (id, patientData) => {
-  const patient = await Patient.findByIdAndUpdate(id, patientData, {
+  const patient = await Patient.findOneAndUpdate({ Patient_ID: id }, patientData, {
     new: true,
     runValidators: true,
   });
@@ -48,10 +49,10 @@ const updatePatient = async (id, patientData) => {
 };
 
 const deletePatient = async (id) => {
-  const patient = await Patient.findByIdAndDelete(id);
+  const patient = await Patient.findOneAndDelete({ Patient_ID: id });
   if (patient) {
-    // Optionally, delete or cancel all appointments for this patient
-    await Appointment.deleteMany({ Patient: id });
+    // Note: Appointment still references Patient by MongoDB _id
+    await Appointment.deleteMany({ Patient: patient._id });
   }
   return patient;
 };

@@ -7,12 +7,12 @@ const bookAppointment = async (appointmentData) => {
 };
 
 const getAppointments = async () => {
-  const appointments = await Appointment.find().populate('Patient', 'FullName').populate('Doctor', 'Doctor_Name Specialty');
+  const appointments = await Appointment.find().populate('Patient', 'Patient_ID FullName').populate('Doctor', 'Doctor_ID Doctor_Name Specialty');
   return appointments;
 };
 
 const getAppointmentById = async (id) => {
-  const appointment = await Appointment.findById(id).populate('Patient', 'FullName').populate('Doctor', 'Doctor_Name Specialty');
+  const appointment = await Appointment.findOne({ Appointment_ID: id }).populate('Patient', 'FullName').populate('Doctor', 'Doctor_Name Specialty');
   return appointment;
 };
 
