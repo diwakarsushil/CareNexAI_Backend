@@ -68,7 +68,7 @@ const doctors = [
     Specialty: 'Cardiology',
     Rating: 4.8,
     Availability: true,
-    schedule: [{ day: 'Monday', timings: ['10AM to 12PM', '5PM to 9PM'] }, { day: 'Tuesday', timings: ['10AM to 3PM'] }],
+    schedule: [{ date: '2026-05-18', timings: ['10AM to 12PM', '5PM to 9PM'] }, { date: '2026-05-19', timings: ['10AM to 3PM'] }],
   },
   {
     Doctor_ID: 'D002',
@@ -76,7 +76,7 @@ const doctors = [
     Specialty: 'Dermatology',
     Rating: 4.5,
     Availability: true,
-    schedule: [{ day: 'Wednesday', timings: ['9AM to 1PM'] }, { day: 'Friday', timings: ['4PM to 8PM'] }],
+    schedule: [{ date: '2026-05-20', timings: ['9AM to 1PM'] }, { date: '2026-05-22', timings: ['4PM to 8PM'] }],
   },
   {
     Doctor_ID: 'D003',
@@ -84,7 +84,7 @@ const doctors = [
     Specialty: 'Orthopedics',
     Rating: 4.7,
     Availability: false,
-    schedule: [{ day: 'Thursday', timings: ['11AM to 4PM'] }, { day: 'Saturday', timings: ['10AM to 2PM'] }],
+    schedule: [{ date: '2026-05-21', timings: ['11AM to 4PM'] }, { date: '2026-05-23', timings: ['10AM to 2PM'] }],
   },
   {
     Doctor_ID: 'D004',
@@ -92,7 +92,7 @@ const doctors = [
     Specialty: 'Pediatrics',
     Rating: 4.9,
     Availability: true,
-    schedule: [{ day: 'Monday', timings: ['8AM to 12PM'] }, { day: 'Wednesday', timings: ['2PM to 6PM'] }],
+    schedule: [{ date: '2026-05-18', timings: ['8AM to 12PM'] }, { date: '2026-05-20', timings: ['2PM to 6PM'] }],
   },
   {
     Doctor_ID: 'D005',
@@ -100,7 +100,7 @@ const doctors = [
     Specialty: 'Neurology',
     Rating: 4.6,
     Availability: true,
-    schedule: [{ day: 'Tuesday', timings: ['10AM to 1PM'] }, { day: 'Thursday', timings: ['3PM to 7PM'] }],
+    schedule: [{ date: '2026-05-19', timings: ['10AM to 1PM'] }, { date: '2026-05-21', timings: ['3PM to 7PM'] }],
   },
   {
     Doctor_ID: 'D006',
@@ -108,7 +108,7 @@ const doctors = [
     Specialty: 'Gynecology',
     Rating: 4.4,
     Availability: true,
-    schedule: [{ day: 'Monday', timings: ['10AM to 12PM', '5PM to 9PM'] }, { day: 'Tuesday', timings: ['10AM to 3PM'] }],
+    schedule: [{ date: '2026-05-18', timings: ['10AM to 12PM', '5PM to 9PM'] }, { date: '2026-05-19', timings: ['10AM to 3PM'] }],
   },
   {
     Doctor_ID: 'D007',
@@ -116,7 +116,7 @@ const doctors = [
     Specialty: 'General Medicine',
     Rating: 4.3,
     Availability: false,
-    schedule: [{ day: 'Wednesday', timings: ['9AM to 1PM'] }, { day: 'Friday', timings: ['4PM to 8PM'] }],
+    schedule: [{ date: '2026-05-20', timings: ['9AM to 1PM'] }, { date: '2026-05-22', timings: ['4PM to 8PM'] }],
   },
   {
     Doctor_ID: 'D008',
@@ -124,7 +124,7 @@ const doctors = [
     Specialty: 'ENT',
     Rating: 4.7,
     Availability: true,
-    schedule: [{ day: 'Thursday', timings: ['11AM to 4PM'] }, { day: 'Saturday', timings: ['10AM to 2PM'] }],
+    schedule: [{ date: '2026-05-21', timings: ['11AM to 4PM'] }, { date: '2026-05-23', timings: ['10AM to 2PM'] }],
   },
   {
     Doctor_ID: 'D009',
@@ -132,7 +132,7 @@ const doctors = [
     Specialty: 'Oncology',
     Rating: 4.8,
     Availability: true,
-    schedule: [{ day: 'Monday', timings: ['8AM to 12PM'] }, { day: 'Wednesday', timings: ['2PM to 6PM'] }],
+    schedule: [{ date: '2026-05-18', timings: ['8AM to 12PM'] }, { date: '2026-05-20', timings: ['2PM to 6PM'] }],
   },
   {
     Doctor_ID: 'D010',
@@ -140,7 +140,7 @@ const doctors = [
     Specialty: 'Ophthalmology',
     Rating: 4.5,
     Availability: false,
-    schedule: [{ day: 'Tuesday', timings: ['10AM to 1PM'] }, { day: 'Thursday', timings: ['3PM to 7PM'] }],
+    schedule: [{ date: '2026-05-19', timings: ['10AM to 1PM'] }, { date: '2026-05-21', timings: ['3PM to 7PM'] }],
   },
   {
     Doctor_ID: 'D011',
@@ -148,7 +148,7 @@ const doctors = [
     Specialty: 'Cardiology',
     Rating: 4.6,
     Availability: true,
-    schedule: [{ day: 'Monday', timings: ['10AM to 12PM', '5PM to 9PM'] }, { day: 'Tuesday', timings: ['10AM to 3PM'] }],
+    schedule: [{ date: '2026-05-18', timings: ['10AM to 12PM', '5PM to 9PM'] }, { date: '2026-05-19', timings: ['10AM to 3PM'] }],
   },
   {
     Doctor_ID: 'D012',
@@ -156,7 +156,7 @@ const doctors = [
     Specialty: 'Pediatrics',
     Rating: 4.9,
     Availability: true,
-    schedule: [{ day: 'Wednesday', timings: ['9AM to 1PM'] }, { day: 'Friday', timings: ['4PM to 8PM'] }],
+    schedule: [{ date: '2026-05-20', timings: ['9AM to 1PM'] }, { date: '2026-05-22', timings: ['4PM to 8PM'] }],
   },
   {
     Doctor_ID: 'D013',
@@ -164,7 +164,7 @@ const doctors = [
     Specialty: 'Orthopedics',
     Rating: 4.4,
     Availability: false,
-    schedule: [{ day: 'Thursday', timings: ['11AM to 4PM'] }, { day: 'Saturday', timings: ['10AM to 2PM'] }],
+    schedule: [{ date: '2026-05-21', timings: ['11AM to 4PM'] }, { date: '2026-05-23', timings: ['10AM to 2PM'] }],
   },
   {
     Doctor_ID: 'D014',
@@ -172,7 +172,7 @@ const doctors = [
     Specialty: 'Dermatology',
     Rating: 4.7,
     Availability: true,
-    schedule: [{ day: 'Monday', timings: ['8AM to 12PM'] }, { day: 'Wednesday', timings: ['2PM to 6PM'] }],
+    schedule: [{ date: '2026-05-18', timings: ['8AM to 12PM'] }, { date: '2026-05-20', timings: ['2PM to 6PM'] }],
   },
   {
     Doctor_ID: 'D015',
@@ -180,7 +180,7 @@ const doctors = [
     Specialty: 'General Medicine',
     Rating: 4.5,
     Availability: true,
-    schedule: [{ day: 'Tuesday', timings: ['10AM to 1PM'] }, { day: 'Thursday', timings: ['3PM to 7PM'] }],
+    schedule: [{ date: '2026-05-19', timings: ['10AM to 1PM'] }, { date: '2026-05-21', timings: ['3PM to 7PM'] }],
   },
 ];
 
