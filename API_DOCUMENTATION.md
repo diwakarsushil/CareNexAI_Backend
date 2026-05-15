@@ -40,10 +40,12 @@ Base URL: `http://localhost:5000/api`
 ### 3. Update Hospital 🔒 (Protected)
 - **Method:** `PUT`
 - **Endpoint:** `/hospitals/:id`
+- **Note:** `:id` refers to the custom `Hospital_ID` (e.g., `H001`).
 
 ### 4. Delete Hospital 🔒 (Protected)
 - **Method:** `DELETE`
 - **Endpoint:** `/hospitals/:id`
+- **Note:** `:id` refers to the custom `Hospital_ID`.
 
 ---
 
@@ -63,23 +65,26 @@ Base URL: `http://localhost:5000/api`
     "Doctor_Name": "Dr. Amit Shah",
     "Specialty": "Cardiology",
     "Rating": 4.8,
-    "Availability": true
+    "Availability": true,
+    "schedule": [
+      { "date": "2026-05-15", "timings": ["10:00 AM", "11:00 AM"] }
+    ]
   }
   ```
 
 ### 3. Update Doctor 🔒 (Protected)
 - **Method:** `PUT`
 - **Endpoint:** `/doctors/:id`
+- **Note:** `:id` refers to the custom `Doctor_ID` (e.g., `D001`).
 
 ### 4. Delete Doctor 🔒 (Protected)
 - **Method:** `DELETE`
 - **Endpoint:** `/doctors/:id`
+- **Note:** `:id` refers to the custom `Doctor_ID`.
 
 ---
 
 ## Patients (`/api/patients`)
-
-*(Note: Patient endpoints do not require authorization)*
 
 ### 1. Get All Patients
 - **Method:** `GET`
@@ -88,12 +93,13 @@ Base URL: `http://localhost:5000/api`
 ### 2. Get Patient by ID
 - **Method:** `GET`
 - **Endpoint:** `/patients/:id`
-- **Description:** Returns the patient profile along with `upcomingAppointments` and `pastAppointments` automatically categorized.
+- **Note:** `:id` refers to the custom `Patient_ID` (e.g., `P001`).
+- **Description:** Returns the patient profile along with `upcomingAppointments` and `pastAppointments` (with populated Doctor data).
 
 ### 3. Get Patient by Mobile Number
 - **Method:** `GET`
 - **Endpoint:** `/patients/mobile/:mobile`
-- **Description:** Returns the exact same payload as "Get by ID", found via their mobile number.
+- **Description:** Returns the same payload as "Get by ID", found via mobile number.
 
 ### 4. Create Patient
 - **Method:** `POST`
@@ -110,15 +116,19 @@ Base URL: `http://localhost:5000/api`
   }
   ```
 
-### 5. Update / Delete Patient
-- **Method:** `PUT` / `DELETE`
+### 5. Update Patient
+- **Method:** `PUT`
 - **Endpoint:** `/patients/:id`
+- **Note:** `:id` refers to the custom `Patient_ID`.
+
+### 6. Delete Patient
+- **Method:** `DELETE`
+- **Endpoint:** `/patients/:id`
+- **Note:** `:id` refers to the custom `Patient_ID`.
 
 ---
 
 ## Appointments (`/api/appointments`)
-
-*(Note: Appointment endpoints do not require authorization)*
 
 ### 1. Book an Appointment
 - **Method:** `POST`
@@ -138,17 +148,25 @@ Base URL: `http://localhost:5000/api`
 ### 2. Get All Appointments
 - **Method:** `GET`
 - **Endpoint:** `/appointments`
+- **Description:** Returns all appointments with populated Patient and Doctor details.
 
-### 3. Update Appointment Status
+### 3. Get Appointment by ID
+- **Method:** `GET`
+- **Endpoint:** `/appointments/:id`
+- **Note:** `:id` refers to the custom `Appointment_ID` (e.g., `A001`).
+
+### 4. Update Appointment Status
 - **Method:** `PUT`
 - **Endpoint:** `/appointments/:id`
+- **Note:** `:id` refers to the custom `Appointment_ID`.
 - **Body Example:**
   ```json
   {
-    "status": "Completed" // Enum: 'Scheduled', 'Completed', 'Cancelled'
+    "Status": "Completed" 
   }
   ```
 
-### 4. Delete Appointment
+### 5. Delete Appointment
 - **Method:** `DELETE`
 - **Endpoint:** `/appointments/:id`
+- **Note:** `:id` refers to the custom `Appointment_ID`.
