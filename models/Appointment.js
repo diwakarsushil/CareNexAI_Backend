@@ -41,7 +41,7 @@ const appointmentSchema = new mongoose.Schema(
 );
 
 // Pre-save hook to generate Appointment_ID
-appointmentSchema.pre('save', async function (next) {
+appointmentSchema.pre('save', async function () {
   if (!this.Appointment_ID) {
     const lastAppointment = await this.constructor.findOne({}, {}, { sort: { 'createdAt' : -1 } });
     let newNumber = 1;
@@ -55,7 +55,6 @@ appointmentSchema.pre('save', async function (next) {
     // Format to A001, A002, etc.
     this.Appointment_ID = `A${newNumber.toString().padStart(3, '0')}`;
   }
-  next();
 });
 
 module.exports = mongoose.model('Appointment', appointmentSchema);
