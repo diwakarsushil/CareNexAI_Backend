@@ -68,7 +68,7 @@ Base URL: `http://localhost:5000/api`
     "Rating": 4.8,
     "Availability": true,
     "schedule": [
-      { "date": "2026-05-15", "timings": ["10:00 AM", "11:00 AM"] }
+      { "day": "2026-05-15", "timings": ["10:00 AM", "11:00 AM"] }
     ]
   }
   ```

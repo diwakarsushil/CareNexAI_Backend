@@ -34,7 +34,7 @@ const doctorSchema = new mongoose.Schema(
     },
     schedule: [
       {
-        date: {
+        day: {
           type: String,
         },
         timings: [
