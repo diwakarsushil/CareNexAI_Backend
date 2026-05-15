@@ -137,7 +137,6 @@ Base URL: `http://localhost:5000/api`
 - **Body Example:**
   ```json
   {
-    "Appointment_ID": "A001",
     "Patient": "P001",
     "Doctor": "D001",
     "AppointmentDate": "2026-06-15",
