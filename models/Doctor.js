@@ -23,6 +23,11 @@ const doctorSchema = new mongoose.Schema(
       max: 5,
       default: 0,
     },
+    Hospital_ID: {
+      type: String,
+      required: [true, 'Please add a hospital ID association'],
+      trim: true,
+    },
     Availability: {
       type: Boolean,
       default: true,
