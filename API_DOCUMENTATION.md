@@ -138,8 +138,8 @@ Base URL: `http://localhost:5000/api`
   ```json
   {
     "Appointment_ID": "A001",
-    "Patient": "<mongodb_patient_id>",
-    "Doctor": "<mongodb_doctor_id>",
+    "Patient": "P001",
+    "Doctor": "D001",
     "AppointmentDate": "2026-06-15",
     "TimeSlot": "10:00 AM",
     "ReasonForVisit": "Routine Checkup"
