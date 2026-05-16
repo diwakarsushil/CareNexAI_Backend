@@ -31,14 +31,9 @@ const getAppointment = async (req, res, next) => {
   }
 };
 
-const updateAppointmentStatus = async (req, res, next) => {
+const updateAppointment = async (req, res, next) => {
   try {
-    const { status } = req.body;
-    if (!status) {
-      res.status(400);
-      throw new Error('Please provide a status to update');
-    }
-    const appointment = await appointmentService.updateAppointmentStatus(req.params.id, status);
+    const appointment = await appointmentService.updateAppointment(req.params.id, req.body);
     if (!appointment) {
       res.status(404);
       throw new Error(`Appointment not found with ID: ${req.params.id}`);
@@ -66,6 +61,6 @@ module.exports = {
   bookAppointment,
   getAppointments,
   getAppointment,
-  updateAppointmentStatus,
+  updateAppointment,
   deleteAppointment,
 };

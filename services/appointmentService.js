@@ -36,10 +36,10 @@ const getAppointmentById = async (id) => {
   return appointment;
 };
 
-const updateAppointmentStatus = async (id, status) => {
+const updateAppointment = async (id, updateData) => {
   const appointment = await Appointment.findOneAndUpdate(
     { Appointment_ID: id },
-    { Status: status },
+    updateData,
     { new: true, runValidators: true }
   ).populate('Patient', 'Patient_ID FullName').populate('Doctor', 'Doctor_ID Doctor_Name Specialty');
   return appointment;
@@ -54,6 +54,6 @@ module.exports = {
   bookAppointment,
   getAppointments,
   getAppointmentById,
-  updateAppointmentStatus,
+  updateAppointment,
   deleteAppointment,
 };

@@ -155,11 +155,19 @@ Base URL: `http://localhost:5000/api`
 - **Endpoint:** `/appointments/:id`
 - **Note:** `:id` refers to the custom `Appointment_ID` (e.g., `A001`).
 
-### 4. Update Appointment Status
+### 4. Update / Reschedule Appointment
 - **Method:** `PUT`
 - **Endpoint:** `/appointments/:id`
 - **Note:** `:id` refers to the custom `Appointment_ID`.
-- **Body Example:**
+- **Body Example (Rescheduling):**
+  ```json
+  {
+    "AppointmentDate": "2026-06-20",
+    "TimeSlot": "11:00 AM",
+    "Status": "Scheduled"
+  }
+  ```
+- **Body Example (Status Update):**
   ```json
   {
     "Status": "Completed" 
