@@ -65,7 +65,7 @@ const doctors = [
   {
     Doctor_ID: 'D001',
     Doctor_Name: 'Dr. Amit Shah',
-    Specialty: 'Cardiology',
+    Specialty: 'Oncology',
     Hospital_ID: 'H001',
     Rating: 4.8,
     Availability: true,
@@ -74,7 +74,7 @@ const doctors = [
   {
     Doctor_ID: 'D002',
     Doctor_Name: 'Dr. Neha Kulkarni',
-    Specialty: 'Dermatology',
+    Specialty: 'Oncology',
     Hospital_ID: 'H002',
     Rating: 4.5,
     Availability: true,
@@ -83,7 +83,7 @@ const doctors = [
   {
     Doctor_ID: 'D003',
     Doctor_Name: 'Dr. Raj Mehta',
-    Specialty: 'Orthopedics',
+    Specialty: 'Oncology',
     Hospital_ID: 'H003',
     Rating: 4.7,
     Availability: false,
@@ -92,7 +92,7 @@ const doctors = [
   {
     Doctor_ID: 'D004',
     Doctor_Name: 'Dr. Priya Nair',
-    Specialty: 'Pediatrics',
+    Specialty: 'Oncology',
     Hospital_ID: 'H004',
     Rating: 4.9,
     Availability: true,
@@ -101,7 +101,7 @@ const doctors = [
   {
     Doctor_ID: 'D005',
     Doctor_Name: 'Dr. Karan Verma',
-    Specialty: 'Neurology',
+    Specialty: 'Oncology',
     Hospital_ID: 'H005',
     Rating: 4.6,
     Availability: true,
@@ -110,7 +110,7 @@ const doctors = [
   {
     Doctor_ID: 'D006',
     Doctor_Name: 'Dr. Sneha Iyer',
-    Specialty: 'Gynecology',
+    Specialty: 'Oncology',
     Hospital_ID: 'H006',
     Rating: 4.4,
     Availability: true,
@@ -119,7 +119,7 @@ const doctors = [
   {
     Doctor_ID: 'D007',
     Doctor_Name: 'Dr. Rahul Patil',
-    Specialty: 'General Medicine',
+    Specialty: 'Oncology',
     Hospital_ID: 'H007',
     Rating: 4.3,
     Availability: false,
@@ -128,7 +128,7 @@ const doctors = [
   {
     Doctor_ID: 'D008',
     Doctor_Name: 'Dr. Anjali Deshmukh',
-    Specialty: 'ENT',
+    Specialty: 'Oncology',
     Hospital_ID: 'H008',
     Rating: 4.7,
     Availability: true,
@@ -146,7 +146,7 @@ const doctors = [
   {
     Doctor_ID: 'D010',
     Doctor_Name: 'Dr. Pooja Sen',
-    Specialty: 'Ophthalmology',
+    Specialty: 'Oncology',
     Hospital_ID: 'H010',
     Rating: 4.5,
     Availability: false,
@@ -155,7 +155,7 @@ const doctors = [
   {
     Doctor_ID: 'D011',
     Doctor_Name: 'Dr. Nitin Joshi',
-    Specialty: 'Cardiology',
+    Specialty: 'Oncology',
     Hospital_ID: 'H001',
     Rating: 4.6,
     Availability: true,
@@ -164,7 +164,7 @@ const doctors = [
   {
     Doctor_ID: 'D012',
     Doctor_Name: 'Dr. Shreya Kapoor',
-    Specialty: 'Pediatrics',
+    Specialty: 'Oncology',
     Hospital_ID: 'H002',
     Rating: 4.9,
     Availability: true,
@@ -173,7 +173,7 @@ const doctors = [
   {
     Doctor_ID: 'D013',
     Doctor_Name: 'Dr. Sameer Khan',
-    Specialty: 'Orthopedics',
+    Specialty: 'Oncology',
     Hospital_ID: 'H003',
     Rating: 4.4,
     Availability: false,
@@ -182,7 +182,7 @@ const doctors = [
   {
     Doctor_ID: 'D014',
     Doctor_Name: 'Dr. Meenal Gupta',
-    Specialty: 'Dermatology',
+    Specialty: 'Oncology',
     Hospital_ID: 'H004',
     Rating: 4.7,
     Availability: true,
@@ -191,7 +191,7 @@ const doctors = [
   {
     Doctor_ID: 'D015',
     Doctor_Name: 'Dr. Arjun Reddy',
-    Specialty: 'General Medicine',
+    Specialty: 'Oncology',
     Hospital_ID: 'H005',
     Rating: 4.5,
     Availability: true,

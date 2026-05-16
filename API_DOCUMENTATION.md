@@ -63,7 +63,7 @@ Base URL: `http://localhost:5000/api`
   {
     "Doctor_ID": "D001",
     "Doctor_Name": "Dr. Amit Shah",
-    "Specialty": "Cardiology",
+    "Specialty": "Oncology",
     "Hospital_ID": "H001",
     "Rating": 4.8,
     "Availability": true,
