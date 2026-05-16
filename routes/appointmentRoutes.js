@@ -3,7 +3,7 @@ const {
   bookAppointment,
   getAppointments,
   getAppointment,
-  updateAppointmentStatus,
+  updateAppointment,
   deleteAppointment,
 } = require('../controllers/appointmentController');
 const { protect } = require('../middlewares/authMiddleware');
